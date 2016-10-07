@@ -3,7 +3,14 @@ import matplotlib.pyplot as plt
 import operator
 
 from task import random_event, complex_random_event, complex_random_event_with_depending, random_event_group
-from visualizer import visualize
+
+
+def visualize(func, n=100000, bins=10):
+    x = [func() for _ in xrange(n)]
+
+    plt.hist(x, bins)
+    plt.show()
+
 
 N = 100000
 EPS = 1e-2
