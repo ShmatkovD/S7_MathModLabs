@@ -72,7 +72,7 @@ def test_complex_random_event_with_depending():
 def test_random_event_group():
     print 'test_random_event_group:'
 
-    p = [0.1, 0.2, 0.3, 0.15, 0.25]
+    p = [0.49, 0.49, 0.02]
     k = len(p)
     events = [random_event_group(_k + 1, *p) for _k in xrange(k)]
 
